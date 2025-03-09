@@ -3,7 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
-//Test Commit2 and push
+//Test Commit and push
 
 public class SortingAlgorithms {
     
