@@ -33,14 +33,25 @@ void bubbleSort(int arr[], int n, int result[]) {
         if (swapped == 0) break;
     }
 }
-}
+
 
 // Selection Sort Implementation
 void selectionSort(int arr[], int n, int result[]) {
     // Copy the array to avoid modifying the original
     copyArray(arr, result, n);
     
-    // TODO: Implement Selection Sort Algorithm
+    int i, j, min_idx, temp;
+    for (i = 0; i < n - 1; i++) {
+        min_idx = i;
+        for (j = i + 1; j < n; j++) {
+            if (result[j] < result[min_idx]) {
+                min_idx = j;
+            }
+        }
+        temp = result[min_idx];
+        result[min_idx] = result[i];
+        result[i] = temp;
+    }
 }
 
 // Insertion Sort Implementation
