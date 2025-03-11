@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Sorts a given array by repeatedly taking a value from the array,
+// comparing it to each already-sorted value, and determines the 
+// first instance where it is larger than all other values already
+// stored (therefore finding the correct sorted position for the value)
 void insertionSort(int arr[], int n) {
     for (int i = 1; i < n; i++) {
         int key = arr[i];
