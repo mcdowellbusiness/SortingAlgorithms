@@ -1,3 +1,6 @@
+# Sorts a given array by repeatedly dividing it into two halves, until down to
+# two numbers, and then sorting the havles until the original-sized array is
+# fully sorted
 def merge_sort(arr):
     if len(arr) > 1:
         mid = len(arr) // 2  # Finding the middle of the array
