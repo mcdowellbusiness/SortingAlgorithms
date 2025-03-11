@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class SortingAlgorithms {
+public class Java_BubbleSort {
 
     /**
      * Sorts an array of integers using the Bubble Sort algorithm.

@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class SortingAlgorithms {
+public class Java_MergeSort {
 
     /**
      * Sorts an array of integers using the Merge Sort algorithm.
