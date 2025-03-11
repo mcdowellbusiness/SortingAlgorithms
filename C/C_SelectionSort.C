@@ -7,7 +7,7 @@ void copyArray(int source[], int destination[], int n) {
     }
 }
 
-// Bubble Sort Implementation
+// Bubble Sort Implementation.
 void bubbleSort(int arr[], int n, int result[]) {
     // Copy the array to avoid modifying the original
     copyArray(arr, result, n);
