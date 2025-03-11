@@ -1,6 +1,8 @@
-// C program for the implementation of merge sort
 #include <stdio.h>
 #include <stdlib.h>
+
+
+// C program for the implementation of merge sort
 
 // Merges two subarrays of arr[].
 // First subarray is arr[left..mid]
