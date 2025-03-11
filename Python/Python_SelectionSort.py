@@ -1,3 +1,6 @@
+# Sorts a given array by taking the smallest unsorted
+# value and placing it in what is  the current first 
+# unsorted position
 def selection_sort(arr):
     n = len(arr)
     for i in range(n):
@@ -7,6 +10,7 @@ def selection_sort(arr):
                 min_index = j
         arr[i], arr[min_index] = arr[min_index], arr[i]
 
+# Reads in input from a file and puts it into a list
 def read_input_file(filename):
     with open(filename, "r") as file:
         data = list(map(int, file.read().split(",")))
