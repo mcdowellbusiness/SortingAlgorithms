@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Sorts a given array by counting the amount of times the values 0-9 occur
+// in the array and displays the values the count-amount of times
 void countSort(int inputArray[], int n) {
 	// Finding the max element of array
 	int m = 0;
