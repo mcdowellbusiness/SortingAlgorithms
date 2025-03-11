@@ -37,7 +37,7 @@ public class SortingAlgorithms {
 
     public static void main(String[] args) {
         try {
-            File file = new File("input.txt");
+            File file = new File("example.txt");
             Scanner scanner = new Scanner(file);
             String line = scanner.nextLine();
             String[] numbers = line.split(",");
@@ -52,9 +52,9 @@ public class SortingAlgorithms {
             System.out.println("Sorted array: " + Arrays.toString(arr));
 
         } catch (FileNotFoundException e) {
-            System.out.println("Error: input.txt not found.");
+            System.out.println("Error: example.txt not found.");
         } catch (NumberFormatException e) {
-            System.out.println("Error: Invalid number in input.txt.");
+            System.out.println("Error: Invalid number in example.txt.");
         }
     }
 }
