@@ -1,56 +1,46 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-// Function to copy an array
-void copyArray(int source[], int destination[], int n) {
-    for (int i = 0; i < n; i++) {
-        destination[i] = source[i];
-    }
-}
+#define MAX_SIZE 100
 
-// Bubble Sort Implementation.
-void bubbleSort(int arr[], int n, int result[]) {
-    // Copy the array to avoid modifying the original
-    copyArray(arr, result, n);
-    
-    int i, j, temp;
-    int swapped;
+void selectionSort(int arr[], int n) {
+    int i, j, minIndex, temp;
     for (i = 0; i < n - 1; i++) {
-        swapped = 0;
-        for (j = 0; j < n - i - 1; j++) {
-            if (result[j] > result[j + 1]) {
-                // Swap elements
-                temp = result[j];
-                result[j] = result[j + 1];
-                result[j + 1] = temp;
-                swapped = 1;
+        minIndex = i;
+        for (j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
             }
         }
-        // If no swaps happened, the array is already sorted
-        if (swapped == 0) break;
+        temp = arr[minIndex];
+        arr[minIndex] = arr[i];
+        arr[i] = temp;
     }
 }
 
-// Function to print an array
-void printArray(int arr[], int n) {
+int main() {
+    FILE *file;
+    int arr[MAX_SIZE], n = 0;
+
+    file = fopen("input.txt", "r");
+    if (file == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+
+    while (fscanf(file, "%d,", &arr[n]) == 1) {
+        n++;
+        if (n >= MAX_SIZE) break;
+    }
+    fclose(file);
+
+    selectionSort(arr, n);
+
+    printf("Sorted numbers:\n");
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
     printf("\n");
-}
-
-// Main function to test bubble sort
-int main() {
-    int arr[] = {64, 34, 25, 12, 22, 11, 90};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int result[n];
-
-    printf("Original array: \n");
-    printArray(arr, n);
-
-    bubbleSort(arr, n, result);
-
-    printf("Sorted array: \n");
-    printArray(result, n);
 
     return 0;
 }
