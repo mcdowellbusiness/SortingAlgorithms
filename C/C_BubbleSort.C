@@ -3,6 +3,9 @@
 
 #define MAX_SIZE 100
 
+// Sorts values in a given array by repeatedly swapping two values that
+// are next to each other until the entire arrray is in order from least
+// to greatest
 void bubbleSort(int arr[], int n) {
     int i, j, temp;
     for (i = 0; i < n - 1; i++) {
