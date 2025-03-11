@@ -7,9 +7,10 @@ public class SortingAlgorithms {
 
     /**
      * Sorts an array of integers using the Bubble Sort algorithm.
+     * 
      * Bubble Sort repeatedly steps through the list, compares adjacent elements,
-     * and swaps them if they are in the wrong order. The pass through the list
-     * is repeated until no swaps are needed, which indicates that the list is sorted.
+     * and swaps them if they are in the wrong order. The pass through the list is 
+     * repeated until no swaps are needed, which indicates that the list is sorted.
      *
      * @param arr The array to be sorted.
      */
