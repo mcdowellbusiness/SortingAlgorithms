@@ -6,7 +6,9 @@ import java.util.Scanner;
 public class Java_SelectionSort {
 
     /**
-     * Sorts an array of integers using the Selection Sort algorithm.
+     * Sorts an array of integers using the Selection Sort algorithm of
+     * repeatedly finding the smallest unsorted value and switching it 
+     * with the current first unsorted value
      *
      * @param arr The array to be sorted.
      */
