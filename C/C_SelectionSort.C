@@ -3,6 +3,8 @@
 
 #define MAX_SIZE 100
 
+// Sorts a given array by repetitively finding the minimum (still-unsorted)
+// value in the array and swapping it with the current first unsorted value
 void selectionSort(int arr[], int n) {
     int i, j, minIndex, temp;
     for (i = 0; i < n - 1; i++) {
