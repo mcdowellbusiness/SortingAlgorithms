@@ -1,11 +1,14 @@
-def quick_sort(arr):
-    if len(arr) <= 1:
-        return arr
-    else:
-        pivot = arr[0]
-        less = [x for x in arr[1:] if x <= pivot]
-        greater = [x for x in arr[1:] if x > pivot]
-        return quick_sort(less) + [pivot] + quick_sort(greater)
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        swapped = False
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+        if not swapped:
+            break
+    return arr
 
 def main():
     try:
@@ -15,7 +18,7 @@ def main():
             arr = [int(num.strip()) for num in numbers]
             
         print("Original array:", arr)
-        sorted_arr = quick_sort(arr)
+        sorted_arr = bubble_sort(arr)
         print("Sorted array:", sorted_arr)
         
     except FileNotFoundError:

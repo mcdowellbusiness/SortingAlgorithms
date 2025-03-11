@@ -13,10 +13,22 @@ def insertionSort(arr):
             arr[j+1] = arr[j]  # Shift elements to the right
             j -= 1
         arr[j+1] = key  # Insert the key in the correct position
- 
 
+def main():
+    try:
+        with open('input.txt', 'r') as file:
+            line = file.readline()
+            numbers = line.split(',')
+            arr = [int(num.strip()) for num in numbers]
+            
+        print("Original array:", arr)
+        insertionSort(arr)
+        print("Sorted array:", arr)
+        
+    except FileNotFoundError:
+        print("Error: input.txt not found.")
+    except ValueError:
+        print("Error: Invalid number in input.txt.")
 
-# Sorting the array [12, 11, 13, 5, 6] using insertionSort
-arr = [12, 11, 13, 5, 6]
-insertionSort(arr)
-print(arr)
+if __name__ == "__main__":
+    main()
