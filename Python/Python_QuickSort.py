@@ -1,7 +1,3 @@
-# Sorts a given array by repeatedly comparing the first and second halves
-# in the current location of the array being looked at until one location
-# remains where the first half is less than or equal to the current value
-# and the second half is greater than the current value
 def quick_sort(arr):
     if len(arr) <= 1:
         return arr
