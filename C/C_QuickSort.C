@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Switches the order of two values
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
+// Ensures that all values to the left of a pivot value are less than the 
+// pivot value and that all values to the right are greater than the pivot
 int partition(int arr[], int low, int high) {
     int pivot = arr[high];
     int i = (low - 1);
@@ -21,6 +24,10 @@ int partition(int arr[], int low, int high) {
     return (i + 1);
 }
 
+// Recursively breaks a given array down into subarrays, with one containing
+// the values less than a selected pivot and the other containing the values
+// greater than the pivot until all subarrays are combined to become a 
+// sorted version of the original array
 void quickSort(int arr[], int low, int high) {
     if (low < high) {
         int pi = partition(arr, low, high);
