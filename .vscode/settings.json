@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "C_BubbleSort.C": "cpp",
+        "C_InsertionSort.C": "cpp",
+        "C_MergeSort.C": "cpp",
+        "C_QuickSort.C": "cpp"
+    }
+}
