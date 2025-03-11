@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Java_InsertionSort{
 	
-	//takes an int array in and uses the insertion sort algorithm to sort it
-	//from least to greatest order
+	// Takes an int array in and uses the insertion sort algorithm to
+	// sort it from least to greatest order
 	public static void insertionSort(int[] arr){
 		
 		int n = arr.length;
