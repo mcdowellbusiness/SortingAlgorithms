@@ -17,8 +17,8 @@ public class SortingAlgorithms {
     public static void quickSort(int[] arr, int low, int high) {
         if (low < high) {
             int pivotIndex = partition(arr, low, high);
-            quickSort(arr, low, pivotIndex - 1);
-            quickSort(arr, pivotIndex + 1, high);
+            quickSort(arr, low, pivotIndex - 1); // Low end of quicksort
+            quickSort(arr, pivotIndex + 1, high); // High end of quicksort
         }
     }
 
