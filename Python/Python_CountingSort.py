@@ -5,7 +5,7 @@ def countingSort(arr):
 	while len(arr) > 0:
 		num = arr.pop(0)
 		count[num] += 1
-
+	
 	for i in range(len(count)):
 		while count[i] > 0:
 			arr.append(i)
